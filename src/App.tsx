@@ -7,7 +7,7 @@ import { PieceDetails } from './components/PieceDetails';
 import { PGNImporter } from './components/PGNImporter';
 import { PieceAnalyzer } from './utils/pieceAnalyzer';
 import { PieceValue } from './types/chess';
-import { Crown, RotateCcw, Play, Upload, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Crown, RotateCcw, Play, Upload, ChevronLeft, ChevronRight, Heart, MessageCircle } from 'lucide-react';
 
 function App() {
   const [chess, setChess] = useState(new Chess());
@@ -125,7 +125,7 @@ function App() {
         </div>
 
         {/* Game Controls */}
-        <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 px-4">
+        <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 px-4 flex-wrap">
           <button
             onClick={resetGame}
             className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg font-semibold text-sm sm:text-base"
@@ -140,6 +140,24 @@ function App() {
             <Upload className="w-5 h-5" />
             Import Game
           </button>
+          <a
+            href="https://fr.tipeee.com/romain-falanga"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 shadow-lg font-semibold text-sm sm:text-base transform hover:scale-105"
+          >
+            <Heart className="w-5 h-5" />
+            Faire un don
+          </a>
+          <a
+            href="https://t.me/RomainFLGpublic"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors shadow-lg font-semibold text-sm sm:text-base"
+          >
+            <MessageCircle className="w-5 h-5" />
+            Telegram
+          </a>
         </div>
 
         {/* Main Game Area */}
