@@ -121,11 +121,7 @@ function App() {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Crown className="w-8 h-8 text-amber-600" />
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800">ChessValue Pro</h1>
-            <Crown className="w-8 h-8 text-amber-600" />
-          </div>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Chess Value</h1>
         </div>
 
         {/* Game Controls */}
